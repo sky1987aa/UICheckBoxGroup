@@ -19,11 +19,14 @@
 {
     [super viewDidLoad];
     
-    [self.checkBoxGroup1 initWithTitles:@[@"Apple",@"Orange",@"Banana"]];
+    [self.view setNeedsLayout];
+    [self.view layoutIfNeeded];
+    
+    [self.checkBoxGroup1 initWithTitles:@[@"Apple",@"Orange",@"Banana"] withColumn:3];
     self.checkBoxGroup1.deldgate = self;
     self.checkBoxGroup1.checkboxMode = UICheckBoxGroupSingleMode;
     
-    [self.checkBoxGroup2 initWithTitles:@[@"Apple",@"Orange",@"Banana"]];
+    [self.checkBoxGroup2 initWithTitles:@[@"Apple",@"Orange",@"Banana",@"Dog",@"Pig",@"Monkey",@"Cat"] withColumn:3];
     self.checkBoxGroup2.deldgate = self;
     self.checkBoxGroup2.checkboxMode = UICheckBoxGroupMultiMode;
 
@@ -37,7 +40,6 @@
     for(NSString *title in dataArray){
         result = [result stringByAppendingString:[NSString stringWithFormat:@"%@,",title]];
     }
-    
     
     if(checkboxgroup == self.checkBoxGroup1){
         self.result1Label.text = result;

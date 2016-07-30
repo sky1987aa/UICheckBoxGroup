@@ -23,8 +23,9 @@ typedef enum {
 @interface UICheckboxGroup : UIView
 
 @property (strong,nonatomic) id <UICheckboxGroupDelegate>deldgate;
+
 @property (assign,nonatomic) NSInteger checkboxMode;
 
-- (void)initWithTitles:(NSArray *)titleArray;
+- (void)initWithTitles:(NSArray *)titleArray withColumn:(NSInteger)defaultColumn;
 
 @end

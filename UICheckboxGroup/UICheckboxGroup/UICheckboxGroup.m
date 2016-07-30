@@ -14,13 +14,34 @@
 
 @implementation UICheckboxGroup
 
-- (void)initWithTitles:(NSArray *)titleArray{
+- (void)initWithTitles:(NSArray *)titleArray withColumn:(NSInteger)defaultColumn{
+    
+    
+    
+    
+    if(defaultColumn == 0){
+        defaultColumn = 1;
+    }
+    
+    CGFloat width = CGRectGetWidth(self.frame)/defaultColumn;
+    CGFloat height = 40.0;
+    
+    NSInteger col = 0;
+    NSInteger row = 0;
     
     self.checkBoxDic = [[NSMutableDictionary alloc] init];
     
     for (int i = 0 ; i <titleArray.count;i++) {
         NSString *title = titleArray[i];
-        UICheckbox *checkbox = [[UICheckbox alloc] initWithFrame:CGRectMake(0, 60*i, 30, 30)];
+        UICheckbox *checkbox = [[UICheckbox alloc] initWithFrame:CGRectMake(width*col, height*row, 20, 20)];;
+        
+        if(col==defaultColumn-1){
+            row++;
+            col = -1;
+        }
+        
+        col++;
+        
         checkbox.delegate = self;
         checkbox.text = title;
         checkbox.checked = NO;

@@ -23,11 +23,11 @@
 
 -(void)drawRect:(CGRect)rect {
     UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"checkbox_%@checked.png", (self.checked) ? @"" : @"un"]];
-    [image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    [image drawInRect:CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))];
     
     if(self.text) {
         if(!loaded) {
-            _textLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width + 5, 0, self.text.length*10, CGRectGetHeight(self.frame))];
+            _textLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width + 5, 0, self.text.length*12, CGRectGetHeight(self.frame))];
             _textLabel.backgroundColor = [UIColor clearColor];
             [self addSubview:_textLabel];
             
