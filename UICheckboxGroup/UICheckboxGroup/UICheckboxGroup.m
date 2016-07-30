@@ -16,9 +16,6 @@
 
 - (void)initWithTitles:(NSArray *)titleArray withColumn:(NSInteger)defaultColumn{
     
-    
-    
-    
     if(defaultColumn == 0){
         defaultColumn = 1;
     }
