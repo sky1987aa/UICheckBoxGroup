@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UICheckbox.h"
+@class UICheckboxGroup;
+
+typedef enum {
+    UICheckBoxGroupSingleMode = 0,
+    UICheckBoxGroupMultiMode
+}UICheckBoxGroupMode;
 
 @protocol UICheckboxGroupDelegate <NSObject>
-
-- (void)getCheckBoxGroupData:(NSMutableArray *) dataArray;
+- (void)checkBoxGroupCallback:(UICheckboxGroup *)checkboxgroup data:(NSMutableArray *) dataArray;
 
 @end
 

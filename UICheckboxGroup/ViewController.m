@@ -21,17 +21,30 @@
     
     [self.checkBoxGroup1 initWithTitles:@[@"Apple",@"Orange",@"Banana"]];
     self.checkBoxGroup1.deldgate = self;
-    self.checkBoxGroup1.checkboxMode = 1;
+    self.checkBoxGroup1.checkboxMode = UICheckBoxGroupSingleMode;
     
     [self.checkBoxGroup2 initWithTitles:@[@"Apple",@"Orange",@"Banana"]];
     self.checkBoxGroup2.deldgate = self;
-    self.checkBoxGroup2.checkboxMode = 0;
+    self.checkBoxGroup2.checkboxMode = UICheckBoxGroupMultiMode;
+
 }
 
 #pragma mark - UICheckBoxDelegate
-
-- (void)getCheckBoxGroupData:(NSMutableArray *)dataArray{
-    NSLog(@"dataArray = %@",dataArray);
+- (void)checkBoxGroupCallback:(UICheckboxGroup *)checkboxgroup data:(NSMutableArray *)dataArray{
+    
+    NSString *result = @"";
+    
+    for(NSString *title in dataArray){
+        result = [result stringByAppendingString:[NSString stringWithFormat:@"%@,",title]];
+    }
+    
+    
+    if(checkboxgroup == self.checkBoxGroup1){
+        self.result1Label.text = result;
+    }else if(checkboxgroup == self.checkBoxGroup2){
+        self.result2Label.text = result;
+    }
 }
+
 
 @end

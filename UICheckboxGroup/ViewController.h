@@ -13,6 +13,8 @@
 
 @property(nonatomic, weak)IBOutlet UICheckboxGroup *checkBoxGroup1;
 @property(nonatomic, weak)IBOutlet UICheckboxGroup *checkBoxGroup2;
+@property (weak, nonatomic) IBOutlet UILabel *result1Label;
+@property (weak, nonatomic) IBOutlet UILabel *result2Label;
 
 
 @end

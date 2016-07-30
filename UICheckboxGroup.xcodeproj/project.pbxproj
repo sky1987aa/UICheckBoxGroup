@@ -14,6 +14,7 @@
 		9589D10E1D4C8B7400475239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9589D10D1D4C8B7400475239 /* Assets.xcassets */; };
 		9589D1111D4C8B7400475239 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9589D10F1D4C8B7400475239 /* LaunchScreen.storyboard */; };
 		9589D11F1D4C8EBF00475239 /* UICheckboxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9589D11E1D4C8EBF00475239 /* UICheckboxGroup.m */; };
+		95C8F6F11D4CBFE600CD4C40 /* UICheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8F6F01D4CBFE600CD4C40 /* UICheckbox.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		9589D1121D4C8B7400475239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9589D11D1D4C8EBF00475239 /* UICheckboxGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UICheckboxGroup.h; path = UICheckboxGroup/UICheckboxGroup.h; sourceTree = "<group>"; };
 		9589D11E1D4C8EBF00475239 /* UICheckboxGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UICheckboxGroup.m; path = UICheckboxGroup/UICheckboxGroup.m; sourceTree = "<group>"; };
+		95C8F6EF1D4CBFE600CD4C40 /* UICheckbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UICheckbox.h; path = UICheckboxGroup/UICheckbox.h; sourceTree = "<group>"; };
+		95C8F6F01D4CBFE600CD4C40 /* UICheckbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UICheckbox.m; path = UICheckboxGroup/UICheckbox.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 			children = (
 				9589D11D1D4C8EBF00475239 /* UICheckboxGroup.h */,
 				9589D11E1D4C8EBF00475239 /* UICheckboxGroup.m */,
+				95C8F6EF1D4CBFE600CD4C40 /* UICheckbox.h */,
+				95C8F6F01D4CBFE600CD4C40 /* UICheckbox.m */,
 			);
 			name = UICheckboxGroup;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			files = (
 				9589D11F1D4C8EBF00475239 /* UICheckboxGroup.m in Sources */,
 				9589D1091D4C8B7400475239 /* ViewController.m in Sources */,
+				95C8F6F11D4CBFE600CD4C40 /* UICheckbox.m in Sources */,
 				9589D1061D4C8B7400475239 /* AppDelegate.m in Sources */,
 				9589D1031D4C8B7400475239 /* main.m in Sources */,
 			);
@@ -314,6 +320,7 @@
 				9589D1171D4C8B7400475239 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
